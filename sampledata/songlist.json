@@ -1,0 +1,239 @@
+{
+  "SONGS": [
+      {
+          "title": "1904",
+          "artist": "The Tallest Man on Earth",
+          "duration": 30
+      },
+      {
+          "title": "#40",
+          "artist": "Dave Matthews",
+          "duration": 35
+      },
+      {
+          "title": "40oz to Freedom",
+          "artist": "Sublime",
+          "duration": 21
+      },
+      {
+          "title": "#41",
+          "artist": "Dave Matthews",
+          "duration": 160
+      },
+      {
+          "title": "American Girl",
+          "artist": "Tom Petty",
+          "duration": 55
+      },
+      {
+          "title": "American Music",
+          "artist": "Violent Femmes",
+          "duration": 56
+      },
+      {
+          "title": "American Pie",
+          "artist": "Don McLean",
+          "duration": 32
+      },
+      {
+          "title": "And it Stoned Me",
+          "artist": "Van Morrison",
+          "duration": 7
+      },
+      {
+          "title": "A Sailor's Christmas",
+          "artist": "Jimmy Buffett",
+          "duration": 93
+      },
+      {
+          "title": "Badfish",
+          "artist": "Sublime",
+          "duration": 13
+      },
+      {
+          "title": "Banana Pancakes",
+          "artist": "Jack Johnson",
+          "duration": 4
+      },
+      {
+          "title": "Barefoot Children",
+          "artist": "Jimmy Buffett",
+          "duration": 51
+      },
+      {
+          "title": "Big Parade",
+          "artist": "The Lumineers",
+          "duration": 41
+      },
+      {
+          "title": "Brown Eyed Girl",
+          "artist": "Van Morrison",
+          "duration": 51
+      },
+      {
+          "title": "Cape Canaveral",
+          "artist": "Conor Oberst",
+          "duration": 21
+      },
+      {
+          "title": "Carry On",
+          "artist": "fun.",
+          "duration": 37
+      },
+      {
+          "title": "Catch the Wind",
+          "artist": "Donovan",
+          "duration": 8
+      },
+      {
+          "title": "Cat's in the Cradle",
+          "artist": "Harry Chapin",
+          "duration": 12
+      },
+      {
+          "title": "Changes in Latitudes, Changes in Attitudes",
+          "artist": "Jimmy Buffett",
+          "duration": 47
+      },
+      {
+          "title": "Classy Girls",
+          "artist": "The Lumineers",
+          "duration": 41
+      },
+      {
+          "title": "Creep",
+          "artist": "Radiohead",
+          "duration": 69
+      },
+      {
+          "title": "Danny Boy",
+          "artist": "Johnny Cash",
+          "duration": 58
+      },
+      {
+          "title": "Darkness Between the Fireflies",
+          "artist": "Mason Jennings",
+          "duration": 53
+      },
+      {
+          "title": "Dead Sea",
+          "artist": "The Lumineers",
+          "duration": 42
+      },
+      {
+          "title": "Distantly in Love",
+          "artist": "Jimmy Buffett",
+          "duration": 51
+      },
+      {
+          "title": "Don't Leave Me (Ne Me Quitte Pas)",
+          "artist": "Regina Spektor",
+          "duration": 60
+      },
+      {
+          "title": "Don't Look Back in Anger",
+          "artist": "Oasis",
+          "duration": 27
+      },
+      {
+          "title": "Don't Stop Believin'",
+          "artist": "Journey",
+          "duration": 48
+      },
+      {
+          "title": "Doomsday",
+          "artist": "Elvis Perkins",
+          "duration": 39
+      },
+      {
+          "title": "Do You Remember",
+          "artist": "Jack Johnson",
+          "duration": 400
+      },
+      {
+          "title": "Drink the Water",
+          "artist": "Jack Johnson",
+          "duration": 35
+      },
+      {
+          "title": "Emmylou",
+          "artist": "First Aid Kit",
+          "duration": 34
+      },
+      {
+          "title": "Fall Line",
+          "artist": "Jack Johnson",
+          "duration": 44
+      },
+      {
+          "title": "Father and Son",
+          "artist": "Cat Stevens",
+          "duration": 88
+      },
+      {
+          "title": "Flake",
+          "artist": "Jack Johnson",
+          "duration": 51
+      },
+      {
+          "title": "Flapper Girl",
+          "artist": "The Lumineers",
+          "duration": 75
+      },
+      {
+          "title": "Flowers in Your Hair",
+          "artist": "The Lumineers",
+          "duration": 47
+      },
+      {
+          "title": "Folsom Prison Blues",
+          "artist": "Johnny Cash",
+          "duration": 62
+      },
+      {
+          "title": "Free Fallin'",
+          "artist": "Tom Petty",
+          "duration": 80
+      },
+      {
+          "title": "Furr",
+          "artist": "Blitzen Trapper",
+          "duration": 34
+      },
+      {
+          "title": "Get Well Cards",
+          "artist": "Conor Oberst",
+          "duration": 6
+      },
+      {
+          "title": "Gulf Coast Highway",
+          "artist": "Emmylou Harris",
+          "duration": 51
+      },
+      {
+          "title": "Half Light I",
+          "artist": "Arcade Fire",
+          "duration": 62
+      },
+      {
+          "title": "Half Light II (No Celebration)",
+          "artist": "Arcade Fire",
+          "duration": 13
+      },
+      {
+          "title": "Harvest",
+          "artist": "Neil Young",
+          "duration": 7
+      },
+      {
+          "title": "Heart of Gold",
+          "artist": "Neil Young",
+          "duration": 12
+      },
+      {
+          "title": "You Belong With Me",
+          "artist": "Taylor Swift",
+          "duration": 33
+      }
+  ]
+}
