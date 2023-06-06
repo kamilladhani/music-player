@@ -33,6 +33,13 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (scrubberValue >= songs[currentSong].duration) {
+      setCurrentSong(currentSong => (currentSong < songs.length-1) ? currentSong+1 : 0);
+      setScrubberValue(0);
+    } 
+  }, [scrubberValue])
+
+  useEffect(() => {
     isPlay ? playSong() : clearInterval(intervalRef.current)
   }, [isPlay])
 
@@ -41,8 +48,8 @@ export default function Home() {
     setSongs(SONGS)
   }, [SONGS])
   
-  const onSlidingComplete = () => {
-    return null
+  const onSlidingComplete = (value: number) => {
+    setScrubberValue(Math.floor(value))
   }
 
   return (
@@ -59,7 +66,7 @@ export default function Home() {
           value={scrubberValue} 
           onSlidingComplete={onSlidingComplete}
           totalDuration={songs[currentSong].duration}
-          trackColor={theme.colors.surfaceDisabled}
+          trackColor={theme.colors.secondary}
           scrubbedColor={theme.colors.primary}
         /> 
         : null
@@ -70,6 +77,7 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container: {
+    width: '80%',
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
