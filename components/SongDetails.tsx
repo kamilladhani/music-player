@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
-import { Song } from '../pages/Home';
 
 export default function SongDetails({song}) {
 

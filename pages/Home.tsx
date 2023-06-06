@@ -55,22 +55,24 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <SongDetails song={songs[currentSong]} />
-      <SongControls 
-        song={songs[currentSong]} 
-        isPlay={isPlay}
-        isRepeat={isRepeat}
-        isShuffle={isShuffle}
-      />
-      {songs.length > 0 ? 
-        <Scrubber 
-          value={scrubberValue} 
-          onSlidingComplete={onSlidingComplete}
-          totalDuration={songs[currentSong].duration}
-          trackColor={theme.colors.secondary}
-          scrubbedColor={theme.colors.primary}
-        /> 
-        : null
-      }
+      <View style={styles.footer}>
+        <SongControls 
+          song={songs[currentSong]} 
+          isPlay={isPlay}
+          isRepeat={isRepeat}
+          isShuffle={isShuffle}
+        />
+        {songs.length > 0 ? 
+          <Scrubber 
+            value={scrubberValue} 
+            onSlidingComplete={onSlidingComplete}
+            totalDuration={songs[currentSong].duration}
+            trackColor={theme.colors.secondary}
+            scrubbedColor={theme.colors.primary}
+          /> 
+          : null
+        }
+      </View>
     </View>
   );
 }
@@ -82,5 +84,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 32,
+    marginTop: 32
+  },
+  footer: {
+    width: '100%',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 48
   },
 });
