@@ -1,10 +1,11 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { SONGS } from '../sampledata/songlist.json'
 import SongDetails from '../components/SongDetails';
 import SongControls from '../components/SongControls';
 import Scrubber from 'react-native-scrubber'
 import { useTheme } from 'react-native-paper';
+import SongList from '../components/SongList';
 
 export interface Song {
   title: string
@@ -22,6 +23,11 @@ export default function Home() {
   const intervalRef = useRef<any>()
 
   const theme = useTheme()
+
+  const onSongSelect = (i: number) => {
+    setCurrentSong(i)
+    setScrubberValue(0);
+  }
 
   const playSong = () => {
     clearInterval(intervalRef.current)
@@ -67,8 +73,21 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <SongDetails song={songs[currentSong]} />
+      <View style={styles.songlist}>
+        <SongList songs={songs} onSongSelect={(i: number) => onSongSelect(i)}/>
+      </View>
       <View style={styles.footer}>
+        <SongDetails song={songs[currentSong]} />
+        {songs.length > 0 ? 
+          <Scrubber 
+            value={scrubberValue} 
+            onSlidingComplete={onSlidingComplete}
+            totalDuration={songs[currentSong].duration}
+            trackColor={theme.colors.secondary}
+            scrubbedColor={theme.colors.primary}
+          /> 
+          : null
+        }
         <SongControls 
           song={songs[currentSong]} 
           isPlay={isPlay}
@@ -80,16 +99,6 @@ export default function Home() {
           onRepeatClick={() => setIsRepeat(!isRepeat)}
           onShuffleClick={() => setIsShuffle(!isShuffle)}
         />
-        {songs.length > 0 ? 
-          <Scrubber 
-            value={scrubberValue} 
-            onSlidingComplete={onSlidingComplete}
-            totalDuration={songs[currentSong].duration}
-            trackColor={theme.colors.secondary}
-            scrubbedColor={theme.colors.primary}
-          /> 
-          : null
-        }
       </View>
     </View>
   );
@@ -97,19 +106,27 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
     flex: 1,
-    backgroundColor: '#fff',
+    width: '80%',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 32,
-    marginTop: 32
+    marginTop: 48
+  },
+  songlist: {
+    flex: 1,
+    width: '100%',
+    paddingTop: 4,
+    shadowColor: '#777',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,  
+    elevation: 3,
   },
   footer: {
     width: '100%',
-    backgroundColor: '#fff',
+    height: 200,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 48
   },
 });

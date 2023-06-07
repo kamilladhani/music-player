@@ -5,7 +5,7 @@ export default function SongDetails({song}) {
 
   return (
     <View style={styles.container}>
-      <Text>{song.title}</Text>
+      <Text style={styles.title}>{song.title}</Text>
       <Text>{song.artist}</Text>
     </View>
   );
@@ -14,8 +14,13 @@ export default function SongDetails({song}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    width: '100%',
+    alignItems: 'flex-start',
     justifyContent: 'center',
+    gap: 4
   },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 14
+  }
 });

@@ -20,14 +20,51 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
 
   return (
     <View style={styles.container}>
-      <IconButton icon="shuffle" size={32} iconColor={isShuffle ? theme.colors.primary : theme.colors.surfaceDisabled} onPress={onShuffleClick}></IconButton>
-      <IconButton icon="skip-previous" size={32} onPress={onPreviousClick}></IconButton>
+      <IconButton 
+        style={styles.button} 
+        icon="shuffle" size={24} 
+        iconColor={isShuffle ? theme.colors.primary : theme.colors.surfaceDisabled} 
+        containerColor={theme.colors.surfaceDisabled} 
+        rippleColor={theme.colors.primary}
+        onPress={onShuffleClick} />
+      <IconButton 
+        style={styles.button} 
+        icon="skip-previous" 
+        containerColor={theme.colors.surfaceDisabled} 
+        rippleColor={theme.colors.primary}
+        size={24} 
+        onPress={onPreviousClick} />
       {isPlay ? 
-        <IconButton icon="pause-circle" size={48} onPress={onPlayPauseClick}></IconButton> : 
-        <IconButton icon="play-circle" size={48} onPress={onPlayPauseClick}></IconButton>
+        <IconButton 
+          style={styles.button} 
+          icon="pause-circle" 
+          size={32} 
+          containerColor={theme.colors.surfaceDisabled} 
+          rippleColor={theme.colors.primary}
+          onPress={onPlayPauseClick} /> : 
+        <IconButton 
+          style={styles.button} 
+          icon="play-circle" 
+          size={32} 
+          containerColor={theme.colors.surfaceDisabled} 
+          rippleColor={theme.colors.primary}
+          onPress={onPlayPauseClick}/>
       }
-      <IconButton icon="skip-next" size={32} onPress={onNextClick}></IconButton>
-      <IconButton icon="repeat" size={32} iconColor={isRepeat ? theme.colors.primary : theme.colors.surfaceDisabled} onPress={onRepeatClick}></IconButton>
+      <IconButton 
+        style={styles.button} 
+        icon="skip-next" 
+        size={24} 
+        containerColor={theme.colors.surfaceDisabled} 
+        rippleColor={theme.colors.primary}
+        onPress={onNextClick} />
+      <IconButton 
+        style={styles.button} 
+        icon="repeat" 
+        size={24} 
+        iconColor={isRepeat ? theme.colors.primary : theme.colors.surfaceDisabled} 
+        containerColor={theme.colors.surfaceDisabled} 
+        rippleColor={theme.colors.primary}
+        onPress={onRepeatClick} />
     </View>
   );
 }
@@ -35,10 +72,13 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
     flexDirection: 'row',
-    gap: 4,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button: {
+    flex: 1,
+    padding: 0
+  }
 });
