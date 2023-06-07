@@ -124,7 +124,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '80%',
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 32,
@@ -132,8 +132,8 @@ const styles = StyleSheet.create({
   },
   songlist: {
     flex: 1,
-    width: '100%',
-    paddingTop: 4,
+    width: '80%',
+    paddingTop: 2,
     paddingBottom: 2,
     shadowColor: "#000",
     shadowOffset: {
@@ -142,10 +142,10 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     elevation: 2,
-    borderRadius: 4
+    borderRadius: 2
   },
   footer: {
-    width: '100%',
+    width: '80%',
     height: 200,
     alignItems: 'center',
     justifyContent: 'center',

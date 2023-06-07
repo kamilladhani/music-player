@@ -25,13 +25,13 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
         icon="shuffle" size={24} 
         iconColor={isShuffle ? theme.colors.primary : theme.colors.surfaceDisabled} 
         containerColor={theme.colors.surfaceDisabled} 
-        rippleColor={theme.colors.primary}
+        rippleColor={theme.colors.surfaceDisabled}
         onPress={onShuffleClick} />
       <IconButton 
         style={styles.button} 
         icon="skip-previous" 
         containerColor={theme.colors.surfaceDisabled} 
-        rippleColor={theme.colors.primary}
+        rippleColor={theme.colors.surfaceDisabled}
         size={24} 
         onPress={onPreviousClick} />
       {isPlay ? 
@@ -40,14 +40,14 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
           icon="pause-circle" 
           size={32} 
           containerColor={theme.colors.surfaceDisabled} 
-          rippleColor={theme.colors.primary}
+          rippleColor={theme.colors.surfaceDisabled}
           onPress={onPlayPauseClick} /> : 
         <IconButton 
           style={styles.button} 
           icon="play-circle" 
           size={32} 
           containerColor={theme.colors.surfaceDisabled} 
-          rippleColor={theme.colors.primary}
+          rippleColor={theme.colors.surfaceDisabled}
           onPress={onPlayPauseClick}/>
       }
       <IconButton 
@@ -55,7 +55,7 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
         icon="skip-next" 
         size={24} 
         containerColor={theme.colors.surfaceDisabled} 
-        rippleColor={theme.colors.primary}
+        rippleColor={theme.colors.surfaceDisabled}
         onPress={onNextClick} />
       <IconButton 
         style={styles.button} 
@@ -63,7 +63,7 @@ export default function SongControls({song, isPlay, isShuffle, isRepeat, onPlayP
         size={24} 
         iconColor={isRepeat ? theme.colors.primary : theme.colors.surfaceDisabled} 
         containerColor={theme.colors.surfaceDisabled} 
-        rippleColor={theme.colors.primary}
+        rippleColor={theme.colors.surfaceDisabled}
         onPress={onRepeatClick} />
     </View>
   );
