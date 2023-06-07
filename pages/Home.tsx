@@ -117,11 +117,15 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     paddingTop: 4,
-    shadowColor: '#777',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 1,  
-    elevation: 3,
+    paddingBottom: 2,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    elevation: 2,
+    borderRadius: 4
   },
   footer: {
     width: '100%',
