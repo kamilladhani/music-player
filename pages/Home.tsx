@@ -64,8 +64,25 @@ export default function Home() {
 
   useMemo(() => {
     // Call API to get songs
-    setSongs(SONGS)
+    // Create copy so that we can reset if songs shuffled
+    setSongs(JSON.parse(JSON.stringify(SONGS)))
   }, [SONGS])
+
+  useEffect(() => {
+    if (isShuffle) {
+      const shuffled = songs
+      for (let i=0; i<shuffled.length-1; i++) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      setSongs(shuffled)
+    } else {
+      setSongs(JSON.parse(JSON.stringify(SONGS)))
+    }
+    setCurrentSong(0)
+    setScrubberValue(0)
+  }, [isShuffle])
+
   
   const onSlidingComplete = (value: number) => {
     setScrubberValue(Math.floor(value))
