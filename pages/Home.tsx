@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     elevation: 2,
-    borderRadius: 2
+    borderRadius: 2,
+    marginBottom: 8
   },
   footer: {
     width: '80%',
