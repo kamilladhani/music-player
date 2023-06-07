@@ -6,9 +6,10 @@ import { List, useTheme } from 'react-native-paper';
 
 interface SongListProps {
   songs: Song[]
+  currentSong: number
   onSongSelect: (i: number) => void
 }
-export default function SongList({songs, onSongSelect}: SongListProps) {
+export default function SongList({songs, currentSong, onSongSelect}: SongListProps) {
   
   const { colors } = useTheme();
   const styles = makeStyles(colors)
@@ -21,8 +22,8 @@ export default function SongList({songs, onSongSelect}: SongListProps) {
           title={song.title}
           description={song.artist}
           descriptionNumberOfLines={1}
-          style={styles.listItem}
           onPress={() => onSongSelect(i)}
+          style={(i===currentSong) ? styles.currentSong : null}
         />
       ))}
     </ScrollView>
@@ -33,8 +34,7 @@ const makeStyles = (colors: any) => StyleSheet.create({
   scrollView: {
     width: '100%',
   },
-  listItem: {
-    // backgroundColor: colors.secondary,
-    // marginLeft: -16,
+  currentSong: {
+    backgroundColor: colors.surfaceDisabled
   }
 });

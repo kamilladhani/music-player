@@ -91,7 +91,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.songlist}>
-        <SongList songs={songs} onSongSelect={(i: number) => onSongSelect(i)}/>
+        <SongList songs={songs} currentSong={currentSong} onSongSelect={(i: number) => onSongSelect(i)}/>
       </View>
       <View style={styles.footer}>
         <SongDetails song={songs[currentSong]} />
