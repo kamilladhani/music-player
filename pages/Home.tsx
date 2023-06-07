@@ -32,10 +32,23 @@ export default function Home() {
     }, 1000);
   }
 
+  const nextSong = () => {
+    if (!isRepeat) {
+      setCurrentSong(currentSong => (currentSong < songs.length-1) ? currentSong+1 : 0);
+    }
+    setScrubberValue(0);
+  }
+
+  const handlePrevClick = () => {
+    if (scrubberValue < 2) {
+      setCurrentSong(currentSong => (currentSong > 0) ? currentSong-1 : 0);
+    }
+    setScrubberValue(0);
+  }
+
   useEffect(() => {
     if (scrubberValue >= songs[currentSong].duration) {
-      setCurrentSong(currentSong => (currentSong < songs.length-1) ? currentSong+1 : 0);
-      setScrubberValue(0);
+      nextSong()
     } 
   }, [scrubberValue])
 
@@ -61,6 +74,11 @@ export default function Home() {
           isPlay={isPlay}
           isRepeat={isRepeat}
           isShuffle={isShuffle}
+          onNextClick={nextSong}
+          onPreviousClick={handlePrevClick}
+          onPlayPauseClick={() => setIsPlay(!isPlay)}
+          onRepeatClick={() => setIsRepeat(!isRepeat)}
+          onShuffleClick={() => setIsShuffle(!isShuffle)}
         />
         {songs.length > 0 ? 
           <Scrubber 
