@@ -14,3 +14,7 @@ Music Player UI built with React Native Expo
 
 
 
+https://github.com/kamilladhani/music-player/assets/10584876/6d270944-d860-432d-84d9-02c06f4757d0
+
+
+
